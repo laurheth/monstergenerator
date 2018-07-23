@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Monster Generator</title>
+    <!-- normalize CSS styles v6.0 -->
+    <link rel="stylesheet" href="css/normalize.css" \>
+
+    <link rel="stylesheet" href="css/style.css" \>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header>
+	<h1>Monster Generator</h1>
+      </header>
+
+      <hr \>
+      
+      <article>
+	
+	<h2 id="monsterName">Monster Name</h2>
+
+	<div class="column">
+	  <section id="leftbox">
+	    <p id="ImageBox"><img id="MonsterImg" /></p>
+	    <p id="monsterDescription">Monster description.</p>	  
+	  </section>
+	</div><div class="column">
+	  <section id="rightbox">
+	    <ul>
+	      <li id="HP">HP 10</li>
+	      <li id="AC">AC 10</li>
+	    </ul>
+	    
+	    <ul>
+	      <li id="STR">STR 10</li>
+	      <li id="DEX">DEX 10</li>
+	      <li id="MIND">MIND 10</li>
+	    </ul>
+	    
+	    <p id="Attack">
+	      Attack Sword +5 1d6+5
+	    </p>
+	    
+	    <p id="Special">
+	      Special abilities.
+	    </p>
+	    
+	  </section>
+	</div>
+
+
+
+	<div class="optbox">
+	  <form>
+	    <input name="level" id="MonsterLevel" type="number" value="1" min="1" \>
+	    <select name="type" id="Types">
+<!--	      <option value="random">Random</option>
+	      <option value="mammal">Mammal</option>
+	      <option value="lizard">Lizard</option>
+	      <option value="aquatic">Aquatic</option>
+	      <option value="bird">Bird</option>
+	      <option value="dragon">Dragon</option>
+	      <option value="jelly">Undead</option>-->
+	    </select>
+	    <button type="button" onclick="generateMonster()">Generate a new monster!</button>
+	  </form>
+	</div>
+
+      </article>
+      
+      <hr \>
+      
+      <footer>
+	<p>Created by: Lauren Hetherington</p>
+      </footer>
+      
+    </div> <!-- end container -->
+
+    <!--    <script src="script/jquery-3.3.1.js"></script> -->
+    <script src="script/monstergen.js"></script>
+    
+  </body>
+
+</html>
