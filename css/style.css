@@ -1,5 +1,9 @@
 /** { border: 1px solid red; }*/
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 1.2em;
     font-family: "Anonymous Pro","Courier New",courier, monospace;
@@ -8,7 +12,7 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 800px;
     margin: 0 auto;
     background-color: #ffe6cc;
     padding: 1em;
@@ -18,17 +22,19 @@ body {
 
 .optbox {
     text-align: center;
+    align-self: center;
     background-color: #ffdab3;
-    width: 50%;
+    /*width: 80%;*/
     margin: 1em auto;
     border-radius: 1em;
     padding: 0.5em;
     box-shadow: 0em 0em 1em black;
+    display: inline-block;
 }
 
 .shell {
     padding: 0px;
-    magin: 0 0;
+    margin: 0 0;
     display: inline-block;
 }
 
@@ -49,14 +55,22 @@ article {
     display: inline-block;
     margin: 0 auto;
     align-items: center;
+    align-content: center;
+    text-align: center;
 /*    background-color: orange;*/
 }
 
-.column {
+.row {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display:flex;
+}
 
+.column {
     /*    float: left;*/
     display: inline-block;
-    width: 46%;
+    width: 50%;
     margin: 1%;
     padding: 1%;
     vertical-align: top;
@@ -69,14 +83,15 @@ section {
     margin: 0 auto;
 }
 
+#leftbox, #rightbox {
+    width:100%;
+}
 
 #leftbox {
-    float: right;
     text-align: right;
 }
 
 #rightbox {
-    float: left;
     text-align: left;
 }
 
@@ -86,4 +101,58 @@ section {
 
 #MonsterImg {
     border-radius:1em;
+    width:100%;
+    max-width:200px;
+    height:auto;
+}
+
+/*input {
+    max-width: 10em;
+}*/
+
+input, select, button {
+    height: 2em;
+    padding: 0.2em;
+    background-color: rgb(248, 244, 238);
+    border-radius:0.5em;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        width:90%;
+    }
+    .optbox {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width:100%;
+        padding:0;
+        margin:0;
+        
+    }
+    .row {
+        display: block;
+    }
+    .column {
+        margin:auto;
+        display:block;
+        width:auto;
+        /*overflow:auto;*/
+    }
+    #leftbox {
+        text-align: left;
+    }
+
+    input, select, button {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .optbox {
+        /*text-align:center;*/
+        width: 100%;
+    }
 }
