@@ -10,7 +10,7 @@ var Special;
 var ImgSrc;
 var MainAdjective;
 
-var MonTypes=["Cat","Rat","Dolphin","Shark","Dragon","Seagull","Trash Dove","Trash Panda","Lich","Zombie","Skeleton","Wolf","Snake"];
+var MonTypes=["Cat","Rat","Dolphin","Shark","Dragon","Seagull","Pigeon","Raccoon","Lich","Zombie","Skeleton","Wolf","Snake"];
 MonTypes.sort();
 
 // Populate the dropdown menu.
@@ -46,6 +46,8 @@ function generateMonster() {
 	monType = MonTypes[Math.floor(Math.random()*MonTypes.length)];
     }
     
+    ImgSrc="img/"+monType+".png";
+
     // Adjectives
     if (monType==="Dragon") {
 	adjectives=["Red", "Blue", "Green", "Black", "White"];
@@ -112,7 +114,7 @@ function generateMonster() {
 
 
     
-    ImgSrc="http://placekitten.com/200/200";
+    //ImgSrc="img/skeleton.png";
     
     // Fill in all of the values.
     document.getElementById("monsterName").innerHTML=MonsterName;

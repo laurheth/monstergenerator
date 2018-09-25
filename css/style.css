@@ -83,3 +83,7 @@ section {
 #ImageBox {
     text-align: center;
 }
+
+#MonsterImg {
+    border-radius:1em;
+}
